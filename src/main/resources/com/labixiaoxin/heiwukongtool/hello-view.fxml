@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="716.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labixiaoxin.heiwukongtool.HelloController">
+    <Label alignment="TOP_LEFT" graphicTextGap="10.0" text="黑悟空存档助手">
+        <textFill>
+            <LinearGradient endX="1.0" endY="0.8611987441872196" startX="0.43533123028391174" startY="0.6056781973372498">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.14035087823867798" green="0.0649772584438324" blue="0.0649772584438324" />
+                        </color>
+                    </Stop>
+                    <Stop offset="0.18453865336658332">
+                        <color>
+                            <Color red="0.5877193212509155" green="0.5151613354682922" blue="0.5151613354682922" />
+                        </color>
+                    </Stop>
+                    <Stop offset="0.45292598101159665">
+                        <color>
+                            <Color red="0.42105263471603394" green="0.18583495914936066" blue="0.18583495914936066" />
+                        </color>
+                    </Stop>
+                    <Stop offset="0.6816143497757848">
+                        <color>
+                            <Color red="0.3245614171028137" green="0.1151992604136467" blue="0.1151992604136467" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="0.24561403691768646" green="0.05837123841047287" blue="0.05837123841047287" />
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </textFill>
+        <font>
+            <Font name="YouYuan" size="50.0" />
+        </font>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+    </Label>
+    <HBox prefHeight="23.0" prefWidth="200.0">
+        <children>
+            <Label prefHeight="23.0" prefWidth="84.0" text="当前游戏路径：" textAlignment="JUSTIFY" />
+            <TextField id="currentArchivePath" fx:id="currentArchivePath" alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="600.0" />
+            <Button mnemonicParsing="false" onAction="#changeCurrentArchivePath" text="修改" />
+        </children>
+    </HBox>
+    <HBox prefHeight="23.0" prefWidth="200.0">
+        <children>
+            <Label text="备份存档路径：" />
+            <TextField id="backCurrentArchivePath" fx:id="backCurrentArchivePath" alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="600.0" />
+            <Button mnemonicParsing="false" onAction="#changeBackCurrentArchivePath" text="修改" />
+        </children>
+    </HBox>
+    <HBox prefHeight="50.0" prefWidth="200.0">
+        <children>
+
+
+<!--            <Button defaultButton="true" onAction="#onGetTheCurrentBackupPathButtonClick" text="获取当前备份路径">-->
+<!--                <HBox.margin>-->
+<!--                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />-->
+<!--                </HBox.margin>-->
+<!--            </Button>-->
+            <Button defaultButton="true" onAction="#onBackupTheCurrentArchiveButtonClick" text="备份当前存档">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+    <HBox prefHeight="23.0" prefWidth="200.0">
+        <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" minWidth="48.0" prefHeight="26.0" prefWidth="36.0" text="石先锋">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Label>
+            <TextField id="shixianfengArchivePath" fx:id="shixianfengArchivePath" alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="500.0">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onAddSxfArchiveToArchive" text="添加存档至存档10">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+    <HBox prefHeight="23.0" prefWidth="200.0">
+        <children>
+            <Label alignment="CENTER" minWidth="48.0" prefHeight="26.0" text="虎先锋" textAlignment="CENTER">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Label>
+            <TextField id="huxianfengArchivePath" fx:id="huxianfengArchivePath" alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="500.0">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onAddHxfArchiveToArchive" text="添加存档至存档10">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+    <HBox prefHeight="23.0" prefWidth="200.0">
+        <children>
+            <Label alignment="CENTER" prefHeight="26.0" text="大圣残躯" textAlignment="CENTER">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Label>
+            <TextField id="dashengcanqvArchivePath" fx:id="dashengcanqvArchivePath" alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="500.0">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onAdddscqArchiveToArchive" text="添加存档至存档10">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+    <HBox prefHeight="23.0" prefWidth="200.0">
+        <children>
+            <Label alignment="CENTER" prefHeight="26.0" text="毒敌大王" textAlignment="CENTER">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Label>
+            <TextField id="dudidawangArchivePath" fx:id="dudidawangArchivePath" alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="500.0">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onAddddddwArchiveToArchive" text="添加存档至存档10">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+    <HBox prefHeight="23.0" prefWidth="200.0">
+        <children>
+            <Label alignment="CENTER" prefHeight="26.0" text="亢金星君" textAlignment="CENTER">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Label>
+            <TextField id="kangjinxingjunArchivePath" fx:id="kangjinxingjunArchivePath" alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="500.0">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onAddkjxjArchiveToArchive" text="添加存档至存档10">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+    <HBox prefHeight="23.0" prefWidth="200.0">
+        <children>
+            <Label alignment="CENTER" minWidth="48.0" prefHeight="26.0" text="小黄龙" textAlignment="CENTER">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Label>
+            <TextField id="xiaohuanglongArchivePath" alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="500.0" fx:id="xiaohuanglongArchivePath">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onAddxhlArchiveToArchive" text="添加存档至存档10">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+    <HBox prefHeight="23.0" prefWidth="200.0">
+        <children>
+            <Label alignment="CENTER" minWidth="48.0" prefHeight="26.0" text="杨戬" textAlignment="CENTER">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Label>
+            <TextField id="yangjianArchivePath" fx:id="yangjianArchivePath" alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="500.0">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onAddyjArchiveToArchive" text="添加存档至存档10">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+    <HBox prefHeight="23.0" prefWidth="200.0">
+        <children>
+            <Label alignment="CENTER" minWidth="48.0" prefHeight="26.0" text="寅虎" textAlignment="CENTER">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Label>
+            <TextField id="yinhuArchivePath" fx:id="yinhuArchivePath" alignment="BOTTOM_CENTER" prefHeight="23.0" prefWidth="500.0">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onAddyhArchiveToArchive" text="添加存档至存档10">
+                <HBox.margin>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+<!--    <TableView prefHeight="200.0" prefWidth="200.0">-->
+<!--        <columns>-->
+<!--            <TableColumn prefWidth="75.0" text="关卡"/>-->
+<!--            <TableColumn prefWidth="150.0" text="备份地址"/>-->
+<!--            <TableColumn prefWidth="75.0" text="操作"/>-->
+<!--        </columns>-->
+<!--    </TableView>-->
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
